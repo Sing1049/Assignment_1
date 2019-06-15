@@ -1,17 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img src="./assets/logo.png">
+    <h2>Claim Request Form</h2>
+    <br>
+      <!-- data from component is displayed down -->
+    <ClaimForm />
+    
+      <!-- data finshed-->
+
+        <!-- After this is useless just to add my name with some <br> tag to add extra space  -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <p>Assignment By <a href="mailto:sing1049@algonquinlive.com">Gurjeet Singh</a> </p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+  // component imported 
+import ClaimForm from './components/form.vue';
 export default {
   name: 'app',
+  data() {
+    return {
+      input : "" 
+    }
+  },
   components: {
-    HelloWorld
+    ClaimForm
   }
 }
 </script>
@@ -24,5 +44,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#app a {
+  text-decoration: none;
+  color: inherit;
+}
+#app a:hover {
+  border-top: 3px solid orange;
+  padding-top: 3px;
 }
 </style>
